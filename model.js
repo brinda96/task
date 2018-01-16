@@ -1,8 +1,8 @@
   const Sequelize = require('sequelize');
-  const db = require('../dbconnection');
+  const db = require('./dbconnection');
 //const config = require('../config');
 
-const User = db.define('userDetails', {
+const User = db.define('userProfile', {
     user_id: {type:Sequelize.INTEGER,autoIncrement:true,primaryKey:true},
     user_name: Sequelize.STRING(128),
     dateofbirth: Sequelize.STRING(128),
@@ -53,7 +53,7 @@ class UserModel {
                         User.sync({}).then(
                             () => {
                                 let jsonObj = {
-                                   user_id: userObj. user_id,
+
                                     user_name: userObj.userName,
                                     dateofbirth:userObj.userdateofbirth,
                                     phone: userObj.phonePrimary,

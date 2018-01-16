@@ -1,4 +1,4 @@
-var user=require('../dbconnection');
+var user=require('./dbconnection');
 user
 .authenticate()
 .then(() => {
